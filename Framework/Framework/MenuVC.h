@@ -29,6 +29,8 @@
 - (void)showMenu;
 - (void)hideMenu;
 
+- (IBAction)onHideMenu:(UIStoryboardSegue *)segue;
+
 @end
 
 
