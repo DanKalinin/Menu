@@ -269,7 +269,7 @@ static const CGFloat StatusBarHeight = 20.0;
             b = 0.0;
             k = c / a;
         } else {
-            b = c / (1 - a);
+            b = c / (1.0 - a);
             k = -b;
         }
         y = k * x + b;
