@@ -10,6 +10,7 @@
 		373F8B501D79EDCC005FDB3D /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B4F1D79EDCC005FDB3D /* Menu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373F8B591D79EDF3005FDB3D /* MenuVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B571D79EDF3005FDB3D /* MenuVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373F8B5A1D79EDF3005FDB3D /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F8B581D79EDF3005FDB3D /* MenuVC.m */; };
+		37A501091DD65404004DD6BC /* Helpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A501081DD65404004DD6BC /* Helpers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		373F8B511D79EDCC005FDB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373F8B571D79EDF3005FDB3D /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
 		373F8B581D79EDF3005FDB3D /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
+		37A501081DD65404004DD6BC /* Helpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Helpers.framework; path = "../../Library/Developer/Xcode/DerivedData/ReadyForSky-ddenzvyatzqxegdthvpasxcpgzjq/Build/Products/Debug-iphoneos/Helpers.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A501091DD65404004DD6BC /* Helpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +39,7 @@
 			children = (
 				373F8B4E1D79EDCC005FDB3D /* Framework */,
 				373F8B4D1D79EDCC005FDB3D /* Products */,
+				37A501071DD65404004DD6BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +60,14 @@
 				373F8B511D79EDCC005FDB3D /* Info.plist */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		37A501071DD65404004DD6BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37A501081DD65404004DD6BC /* Helpers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

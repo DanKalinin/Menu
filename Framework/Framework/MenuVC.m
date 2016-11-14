@@ -7,6 +7,7 @@
 //
 
 #import "MenuVC.h"
+#import <Helpers/Helpers.h>
 
 static NSString *const ShowMenuSegue = @"Show Menu";
 static NSString *const HideMenuSegue = @"Hide Menu";
@@ -211,14 +212,8 @@ static const CGFloat StatusBarHeight = 20.0;
     UIViewController *childVC = self.childViewControllers.firstObject;
     if ([vc isEqual:childVC]) return;
     
-    [childVC willMoveToParentViewController:nil];
-    [childVC.view removeFromSuperview];
-    [childVC removeFromParentViewController];
-    
-    [self addChildViewController:vc];
-    vc.view.frame = self.view.bounds;
-    [self.view addSubview:vc.view];
-    [vc didMoveToParentViewController:self];
+    [self removeEmbeddedViewController:childVC];
+    [self embedViewController:vc toFrame:self.view.frame];
 }
 
 - (void)showMenu {
