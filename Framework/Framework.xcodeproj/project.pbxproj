@@ -10,16 +10,25 @@
 		373F8B501D79EDCC005FDB3D /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B4F1D79EDCC005FDB3D /* Menu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373F8B591D79EDF3005FDB3D /* MenuVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B571D79EDF3005FDB3D /* MenuVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373F8B5A1D79EDF3005FDB3D /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F8B581D79EDF3005FDB3D /* MenuVC.m */; };
-		37A501091DD65404004DD6BC /* Helpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A501081DD65404004DD6BC /* Helpers.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3701E2861DDA1B6700E3DC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3701E2821DDA1B6700E3DC7A /* Framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3743921C1D91EED7005E1075;
+			remoteInfo = Helpers;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3701E2821DDA1B6700E3DC7A /* Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Framework.xcodeproj; path = ../../../../Helpers/Framework/Framework.xcodeproj; sourceTree = "<group>"; };
 		373F8B4C1D79EDCC005FDB3D /* Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373F8B4F1D79EDCC005FDB3D /* Menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		373F8B511D79EDCC005FDB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373F8B571D79EDF3005FDB3D /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
 		373F8B581D79EDF3005FDB3D /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
-		37A501081DD65404004DD6BC /* Helpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Helpers.framework; path = "../../Library/Developer/Xcode/DerivedData/ReadyForSky-ddenzvyatzqxegdthvpasxcpgzjq/Build/Products/Debug-iphoneos/Helpers.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,19 +36,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A501091DD65404004DD6BC /* Helpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3701E2801DDA1B5200E3DC7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3701E2811DDA1B5200E3DC7A /* Helpers */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		3701E2811DDA1B5200E3DC7A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3701E2821DDA1B6700E3DC7A /* Framework.xcodeproj */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3701E2831DDA1B6700E3DC7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3701E2871DDA1B6700E3DC7A /* Helpers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		373F8B421D79EDCC005FDB3D = {
 			isa = PBXGroup;
 			children = (
+				3701E2801DDA1B5200E3DC7A /* Frameworks */,
 				373F8B4E1D79EDCC005FDB3D /* Framework */,
 				373F8B4D1D79EDCC005FDB3D /* Products */,
-				37A501071DD65404004DD6BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +92,6 @@
 				373F8B511D79EDCC005FDB3D /* Info.plist */,
 			);
 			path = Framework;
-			sourceTree = "<group>";
-		};
-		37A501071DD65404004DD6BC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				37A501081DD65404004DD6BC /* Helpers.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,12 +151,28 @@
 			mainGroup = 373F8B421D79EDCC005FDB3D;
 			productRefGroup = 373F8B4D1D79EDCC005FDB3D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3701E2831DDA1B6700E3DC7A /* Products */;
+					ProjectRef = 3701E2821DDA1B6700E3DC7A /* Framework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				373F8B4B1D79EDCC005FDB3D /* Menu */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3701E2871DDA1B6700E3DC7A /* Helpers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Helpers.framework;
+			remoteRef = 3701E2861DDA1B6700E3DC7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		373F8B4A1D79EDCC005FDB3D /* Resources */ = {
