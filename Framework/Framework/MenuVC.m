@@ -213,7 +213,7 @@ static const CGFloat StatusBarHeight = 20.0;
     if ([vc isEqual:childVC]) return;
     
     [self removeEmbeddedViewController:childVC];
-    [self embedViewController:vc toFrame:self.view.frame];
+    [self embedViewController:vc toView:self.view];
 }
 
 - (void)showMenu {
