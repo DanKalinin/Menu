@@ -10,6 +10,7 @@
 		373F8B501D79EDCC005FDB3D /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B4F1D79EDCC005FDB3D /* Menu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373F8B591D79EDF3005FDB3D /* MenuVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B571D79EDF3005FDB3D /* MenuVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		373F8B5A1D79EDF3005FDB3D /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F8B581D79EDF3005FDB3D /* MenuVC.m */; };
+		E7FB4BA11E200ACF0023C9F2 /* Helpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FB4BA01E200ACF0023C9F2 /* Helpers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		373F8B511D79EDCC005FDB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373F8B571D79EDF3005FDB3D /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
 		373F8B581D79EDF3005FDB3D /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
+		E7FB4BA01E200ACF0023C9F2 /* Helpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Helpers.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SmartHome-cvdsmsxbionjzggzrafjyfiozrze/Build/Products/Debug-iphoneos/Helpers.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7FB4BA11E200ACF0023C9F2 /* Helpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		3701E2801DDA1B5200E3DC7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7FB4BA01E200ACF0023C9F2 /* Helpers.framework */,
 				3701E2811DDA1B5200E3DC7A /* Helpers */,
 			);
 			path = Frameworks;
