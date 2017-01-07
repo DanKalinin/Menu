@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "Framework/Framework/**/*.json", "Framework/Framework/**/*.plist"
+  s.resources = "Framework/Framework/**/*.{json,plist}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
