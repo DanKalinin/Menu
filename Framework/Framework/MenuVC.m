@@ -44,7 +44,7 @@ static const CGFloat StatusBarHeight = 20.0;
     if (self) {
         self.dimmingView = [UIView new];
         
-        self.tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
+        self.tgr = [UITapGestureRecognizer.alloc initWithTarget:self action:@selector(onTap:)];
         [self.dimmingView addGestureRecognizer:self.tgr];
     }
     return self;
@@ -79,7 +79,7 @@ static const CGFloat StatusBarHeight = 20.0;
     
     if (self.pgr) return;
     
-    self.pgr = [[UIPanGestureRecognizer alloc] initWithTarget:self.presentingViewController action:NSSelectorFromString(@"onPan:")];
+    self.pgr = [UIPanGestureRecognizer.alloc initWithTarget:self.presentingViewController action:NSSelectorFromString(@"onPan:")];
     self.pgr.maximumNumberOfTouches = 1;
     [self.dimmingView addGestureRecognizer:self.pgr];
 }
@@ -194,7 +194,7 @@ static const CGFloat StatusBarHeight = 20.0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pgr = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(onPan:)];
+    self.pgr = [UIScreenEdgePanGestureRecognizer.alloc initWithTarget:self action:@selector(onPan:)];
     self.pgr.edges = UIRectEdgeLeft;
     self.pgr.maximumNumberOfTouches = 1;
     [self.view addGestureRecognizer:self.pgr];
@@ -309,7 +309,7 @@ static const CGFloat StatusBarHeight = 20.0;
 }
 
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
-    MenuPresentationController *mpc = [[MenuPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+    MenuPresentationController *mpc = [MenuPresentationController.alloc initWithPresentedViewController:presented presentingViewController:presenting];
     mpc.width = self.width;
     mpc.alpha = self.alpha;
     return mpc;
