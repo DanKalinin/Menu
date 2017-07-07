@@ -201,6 +201,8 @@ static const CGFloat StatusBarHeight = 20.0;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    
     if ([segue.identifier isEqualToString:ShowMenuSegue]) {
         UIViewController *vc = segue.destinationViewController;
         vc.modalPresentationStyle = UIModalPresentationCustom;
