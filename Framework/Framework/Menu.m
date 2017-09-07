@@ -185,6 +185,7 @@
         [self.view addGestureRecognizer:self.top.pgr];
         
         self.top.transform = self.top.startTransform;
+        self.top.hidden = YES;
     }
     
     if (self.left) {
@@ -203,6 +204,7 @@
         [self.view addGestureRecognizer:self.left.pgr];
         
         self.left.transform = self.left.startTransform;
+        self.left.hidden = YES;
     }
     
     if (self.bottom) {
@@ -221,6 +223,7 @@
         [self.view addGestureRecognizer:self.bottom.pgr];
         
         self.bottom.transform = self.bottom.startTransform;
+        self.bottom.hidden = YES;
     }
     
     if (self.right) {
@@ -239,6 +242,7 @@
         [self.view addGestureRecognizer:self.right.pgr];
         
         self.right.transform = self.right.startTransform;
+        self.right.hidden = YES;
     }
 }
 
