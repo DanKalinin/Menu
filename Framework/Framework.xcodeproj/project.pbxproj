@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		373F8B501D79EDCC005FDB3D /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B4F1D79EDCC005FDB3D /* Menu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		373F8B591D79EDF3005FDB3D /* MenuVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 373F8B571D79EDF3005FDB3D /* MenuVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		373F8B5A1D79EDF3005FDB3D /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 373F8B581D79EDF3005FDB3D /* MenuVC.m */; };
+		37BF6EFA1F61B7E700135BE3 /* Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 37BF6EF81F61B7E700135BE3 /* Menu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37BF6EFB1F61B7E700135BE3 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF6EF91F61B7E700135BE3 /* Menu.m */; };
 		E7FB4BA11E200ACF0023C9F2 /* Helpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FB4BA01E200ACF0023C9F2 /* Helpers.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,10 +25,9 @@
 /* Begin PBXFileReference section */
 		3701E2821DDA1B6700E3DC7A /* Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Framework.xcodeproj; path = ../../Helpers/Framework/Framework.xcodeproj; sourceTree = "<group>"; };
 		373F8B4C1D79EDCC005FDB3D /* Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		373F8B4F1D79EDCC005FDB3D /* Menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		373F8B511D79EDCC005FDB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		373F8B571D79EDF3005FDB3D /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
-		373F8B581D79EDF3005FDB3D /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
+		37BF6EF81F61B7E700135BE3 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		37BF6EF91F61B7E700135BE3 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		E7FB4BA01E200ACF0023C9F2 /* Helpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Helpers.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SmartHome-cvdsmsxbionjzggzrafjyfiozrze/Build/Products/Debug-iphoneos/Helpers.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,10 +88,9 @@
 		373F8B4E1D79EDCC005FDB3D /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				373F8B4F1D79EDCC005FDB3D /* Menu.h */,
-				373F8B571D79EDF3005FDB3D /* MenuVC.h */,
-				373F8B581D79EDF3005FDB3D /* MenuVC.m */,
 				373F8B511D79EDCC005FDB3D /* Info.plist */,
+				37BF6EF81F61B7E700135BE3 /* Menu.h */,
+				37BF6EF91F61B7E700135BE3 /* Menu.m */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -105,8 +102,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373F8B591D79EDF3005FDB3D /* MenuVC.h in Headers */,
-				373F8B501D79EDCC005FDB3D /* Menu.h in Headers */,
+				37BF6EFA1F61B7E700135BE3 /* Menu.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373F8B5A1D79EDF3005FDB3D /* MenuVC.m in Sources */,
+				37BF6EFB1F61B7E700135BE3 /* Menu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
