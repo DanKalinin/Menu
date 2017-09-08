@@ -60,6 +60,7 @@
 @property UIPanGestureRecognizer *pgrDimming;
 @property UITapGestureRecognizer *tgrDimming;
 
+@property BOOL showing;
 @property UIView *content;
 @property UIView *dimming;
 @property MenuView *menu;
@@ -84,9 +85,10 @@
 - (void)menu:(MenuView *)menu show:(BOOL)show animated:(BOOL)animated {
     if (self.animator) return;
     
-    [UIView setAnimationsEnabled:animated];
-    
+    self.showing = show;
     BOOL hide = !show;
+    
+    [UIView setAnimationsEnabled:animated];
     
     if (show) {
         self.menu = menu;
