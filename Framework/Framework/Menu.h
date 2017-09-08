@@ -26,11 +26,11 @@ FOUNDATION_EXPORT const unsigned char MenuVersionString[];
 
 @property IBInspectable UIColor *dimmingColor;
 @property IBInspectable CGFloat dimmingEndAlpha;
+@property IBInspectable CGFloat contentEndScale;
 @property IBInspectable CGFloat anchor;
 @property IBInspectable BOOL above;
 @property IBInspectable BOOL prefersStatusBarHidden;
 
-@property CGAffineTransform contentEndTransform;
 @property NSTimeInterval duration;
 
 @end

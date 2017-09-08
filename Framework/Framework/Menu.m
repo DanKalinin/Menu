@@ -21,6 +21,7 @@
 @interface MenuView ()
 
 @property CGAffineTransform startTransform;
+@property CGAffineTransform contentEndTransform;
 @property UIScreenEdgePanGestureRecognizer *pgr;
 
 @end
@@ -34,6 +35,7 @@
     if (self) {
         self.dimmingColor = UIColor.blackColor;
         self.dimmingEndAlpha = 0.4;
+        self.contentEndScale = 1.0;
         self.anchor = 0.5;
         self.duration = 0.3;
         self.above = NO;
@@ -107,6 +109,7 @@
         if (show) {
             menu.transform = CGAffineTransformIdentity;
             self.content.transform = menu.above ? CGAffineTransformIdentity : menu.contentEndTransform;
+            self.content.transform = CGAffineTransformScale(self.content.transform, menu.contentEndScale, menu.contentEndScale);
             self.dimming.alpha = menu.dimmingEndAlpha;
         } else {
             menu.transform = menu.startTransform;
