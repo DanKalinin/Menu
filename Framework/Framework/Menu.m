@@ -57,12 +57,11 @@
 
 @interface MenuViewController ()
 
-@property UIView *content;
-@property UIView *dimming;
-
 @property UIPanGestureRecognizer *pgrDimming;
 @property UITapGestureRecognizer *tgrDimming;
 
+@property UIView *content;
+@property UIView *dimming;
 @property MenuView *menu;
 @property UIViewController *viewController;
 
