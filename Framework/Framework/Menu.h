@@ -30,8 +30,7 @@ FOUNDATION_EXPORT const unsigned char MenuVersionString[];
 @property IBInspectable CGFloat anchor;
 @property IBInspectable BOOL above;
 @property IBInspectable BOOL prefersStatusBarHidden;
-
-@property NSTimeInterval duration;
+@property IBInspectable NSTimeInterval duration;
 
 @end
 
