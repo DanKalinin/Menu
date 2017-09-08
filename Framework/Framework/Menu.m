@@ -144,18 +144,27 @@
 
 #pragma mark - View controller
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.content = UIView.new;
+        self.dimming = UIView.new;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Content view
     
-    self.content = [UIView.alloc initWithFrame:self.view.bounds];
+    self.content.frame = self.view.bounds;
     self.content.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     [self.view addSubview:self.content];
     
     // Dimming view
     
-    self.dimming = [UIView.alloc initWithFrame:self.view.bounds];
+    self.dimming.frame = self.view.bounds;
     self.dimming.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     [self.view addSubview:self.dimming];
     
