@@ -139,7 +139,7 @@
         <!--MenuTVC-->
         <scene sceneID="1lC-Gy-BOb">
             <objects>
-                <tableViewController id="Idc-pR-Aea" customClass="MenuTVC" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Idc-pR-Aea" customClass="MenuTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="o7G-kB-ZCx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
