@@ -50,6 +50,11 @@ FOUNDATION_EXPORT const unsigned char MenuVersionString[];
 @property (strong, nonatomic) IBOutlet MenuView *bottom;
 @property (strong, nonatomic) IBOutlet MenuView *right;
 
+@property (weak, readonly) UIViewController *topViewController;
+@property (weak, readonly) UIViewController *leftViewController;
+@property (weak, readonly) UIViewController *bottomViewController;
+@property (weak, readonly) UIViewController *rightViewController;
+
 @property (readonly) BOOL showing;
 @property (readonly) UIView *content;
 @property (readonly) UIView *dimming;

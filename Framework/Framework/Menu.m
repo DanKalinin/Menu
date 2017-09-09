@@ -57,6 +57,11 @@
 
 @interface MenuViewController ()
 
+@property (weak) UIViewController *topViewController;
+@property (weak) UIViewController *leftViewController;
+@property (weak) UIViewController *bottomViewController;
+@property (weak) UIViewController *rightViewController;
+
 @property UIPanGestureRecognizer *pgrDimming;
 @property UITapGestureRecognizer *tgrDimming;
 
@@ -256,6 +261,20 @@
         
         self.right.transform = self.right.startTransform;
         self.right.hidden = YES;
+    }
+    
+    // Menu view controllers
+    
+    for (UIViewController *viewController in self.childViewControllers) {
+        if ([viewController.view.superview isEqual:self.top]) {
+            self.topViewController = viewController;
+        } else if ([viewController.view.superview isEqual:self.left]) {
+            self.leftViewController = viewController;
+        } else if ([viewController.view.superview isEqual:self.bottom]) {
+            self.bottomViewController = viewController;
+        } else if ([viewController.view.superview isEqual:self.right]) {
+            self.rightViewController = viewController;
+        }
     }
 }
 
