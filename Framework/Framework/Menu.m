@@ -101,7 +101,7 @@
         self.dimming.backgroundColor = menu.dimmingColor;
         
         for (UIScreenEdgePanGestureRecognizer *pgr in self.view.gestureRecognizers) {
-            pgr.enabled = [pgr isEqual:self.menu.pgr];
+            pgr.enabled = [pgr isEqual:menu.pgr];
         }
         
         [self setPrefersStatusBarHidden:menu.prefersStatusBarHidden animated:animated];
