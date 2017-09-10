@@ -132,12 +132,12 @@
         }
         self.animator = nil;
         self.shouldAutorotate = YES;
-        self.pgrDimming.enabled = YES;
+        self.pgrDimming.enabled = self.tgrDimming.enabled = YES;
     }];
     [animator startAnimation];
     self.animator = animator;
     self.shouldAutorotate = NO;
-    self.pgrDimming.enabled = hide;
+    self.pgrDimming.enabled = self.tgrDimming.enabled = hide;
     
     [UIView setAnimationsEnabled:YES];
 }
