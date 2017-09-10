@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="top" id="NqY-PL-9Ql"/>
                         <viewControllerLayoutGuide type="bottom" id="mda-gb-aP2"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YoX-bK-yrb">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="YoX-bK-yrb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
