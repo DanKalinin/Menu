@@ -32,6 +32,8 @@ FOUNDATION_EXPORT const unsigned char MenuVersionString[];
 @property IBInspectable BOOL prefersStatusBarHidden;
 @property IBInspectable NSTimeInterval duration;
 
+@property (readonly) UIScreenEdgePanGestureRecognizer *pgr;
+
 @end
 
 
