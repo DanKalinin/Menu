@@ -114,8 +114,8 @@
     [animator addAnimations:^{
         if (show) {
             menu.transform = CGAffineTransformIdentity;
-            self.content.transform = menu.above ? CGAffineTransformIdentity : menu.contentEndTransform;
-            self.content.transform = CGAffineTransformScale(self.content.transform, menu.contentEndScale, menu.contentEndScale);
+            CGAffineTransform transform = menu.above ? CGAffineTransformIdentity : menu.contentEndTransform;
+            self.content.transform = CGAffineTransformScale(transform, menu.contentEndScale, menu.contentEndScale);
             self.dimming.alpha = menu.dimmingEndAlpha;
         } else {
             menu.transform = menu.startTransform;
@@ -190,8 +190,10 @@
     CGRect frame;
     
     if (self.top) {
+        CGFloat ty = 0.5 * self.content.bounds.size.height * (1.0 - self.left.contentEndScale);
+        
         self.top.startTransform = CGAffineTransformMakeTranslation(0.0, -self.top.bounds.size.height);
-        self.top.contentEndTransform = CGAffineTransformMakeTranslation(0.0, self.top.bounds.size.height);
+        self.top.contentEndTransform = CGAffineTransformMakeTranslation(0.0, self.top.bounds.size.height - ty);
         
         frame = self.view.bounds;
         frame.origin.y = 0.0;
@@ -209,8 +211,10 @@
     }
     
     if (self.left) {
+        CGFloat tx = 0.5 * self.content.bounds.size.width * (1.0 - self.left.contentEndScale);
+        
         self.left.startTransform = CGAffineTransformMakeTranslation(-self.left.bounds.size.width, 0.0);
-        self.left.contentEndTransform = CGAffineTransformMakeTranslation(self.left.bounds.size.width, 0.0);
+        self.left.contentEndTransform = CGAffineTransformMakeTranslation(self.left.bounds.size.width - tx, 0.0);
         
         frame = self.view.bounds;
         frame.origin.x = 0.0;
@@ -228,8 +232,10 @@
     }
     
     if (self.bottom) {
+        CGFloat ty = 0.5 * self.content.bounds.size.height * (1.0 - self.left.contentEndScale);
+        
         self.bottom.startTransform = CGAffineTransformMakeTranslation(0.0, self.bottom.bounds.size.height);
-        self.bottom.contentEndTransform = CGAffineTransformMakeTranslation(0.0, -self.bottom.bounds.size.height);
+        self.bottom.contentEndTransform = CGAffineTransformMakeTranslation(0.0, -self.bottom.bounds.size.height + ty);
         
         frame = self.view.bounds;
         frame.origin.y = (self.view.bounds.size.height - self.bottom.bounds.size.height);
@@ -247,8 +253,10 @@
     }
     
     if (self.right) {
+        CGFloat tx = 0.5 * self.content.bounds.size.width * (1.0 - self.left.contentEndScale);
+        
         self.right.startTransform = CGAffineTransformMakeTranslation(self.right.bounds.size.width, 0.0);
-        self.right.contentEndTransform = CGAffineTransformMakeTranslation(-self.right.bounds.size.width, 0.0);
+        self.right.contentEndTransform = CGAffineTransformMakeTranslation(-self.right.bounds.size.width + tx, 0.0);
         
         frame = self.view.bounds;
         frame.origin.x = self.view.bounds.size.width - self.right.bounds.size.width;
