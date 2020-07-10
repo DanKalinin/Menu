@@ -115,11 +115,12 @@
         if (show) {
             menu.transform = CGAffineTransformIdentity;
             CGAffineTransform transform = menu.above ? CGAffineTransformIdentity : menu.contentEndTransform;
-            self.content.transform = CGAffineTransformScale(transform, menu.contentEndScale, menu.contentEndScale);
+            transform = CGAffineTransformScale(transform, menu.contentEndScale, menu.contentEndScale);
+            self.content.layer.transform = CATransform3DMakeAffineTransform(transform);
             self.dimming.alpha = menu.dimmingEndAlpha;
         } else {
             menu.transform = menu.startTransform;
-            self.content.transform = CGAffineTransformIdentity;
+            self.content.layer.transform = CATransform3DMakeAffineTransform(CGAffineTransformIdentity);
             self.dimming.alpha = 0.0;
         }
     }];
