@@ -20,8 +20,8 @@
 
 @interface MenuView ()
 
-@property CGAffineTransform startTransform;
-@property CGAffineTransform contentEndTransform;
+@property CATransform3D startTransform;
+@property CATransform3D contentEndTransform;
 @property UIScreenEdgePanGestureRecognizer *pgr;
 
 @end
@@ -113,14 +113,13 @@
     UIViewPropertyAnimator *animator = [UIViewPropertyAnimator.alloc initWithDuration:menu.duration timingParameters:timing];
     [animator addAnimations:^{
         if (show) {
-            menu.transform = CGAffineTransformIdentity;
-            CGAffineTransform transform = menu.above ? CGAffineTransformIdentity : menu.contentEndTransform;
-            transform = CGAffineTransformScale(transform, menu.contentEndScale, menu.contentEndScale);
-            self.content.layer.transform = CATransform3DMakeAffineTransform(transform);
+            menu.layer.transform = CATransform3DIdentity;
+            CATransform3D transform = menu.above ? CATransform3DIdentity : menu.contentEndTransform;
+            self.content.layer.transform = CATransform3DScale(transform, menu.contentEndScale, menu.contentEndScale, 1.0);
             self.dimming.alpha = menu.dimmingEndAlpha;
         } else {
-            menu.transform = menu.startTransform;
-            self.content.layer.transform = CATransform3DMakeAffineTransform(CGAffineTransformIdentity);
+            menu.layer.transform = menu.startTransform;
+            self.content.layer.transform = CATransform3DIdentity;
             self.dimming.alpha = 0.0;
         }
     }];
@@ -193,8 +192,8 @@
     if (self.top) {
         CGFloat ty = 0.5 * self.content.bounds.size.height * (1.0 - self.left.contentEndScale);
         
-        self.top.startTransform = CGAffineTransformMakeTranslation(0.0, -self.top.bounds.size.height);
-        self.top.contentEndTransform = CGAffineTransformMakeTranslation(0.0, self.top.bounds.size.height - ty);
+        self.top.startTransform = CATransform3DMakeTranslation(0.0, -self.top.bounds.size.height, 0.0);
+        self.top.contentEndTransform = CATransform3DMakeTranslation(0.0, self.top.bounds.size.height - ty, 0.0);
         
         frame = self.view.bounds;
         frame.origin.y = 0.0;
@@ -207,15 +206,15 @@
         self.top.pgr.edges = UIRectEdgeTop;
         [self.view addGestureRecognizer:self.top.pgr];
         
-        self.top.transform = self.top.startTransform;
+        self.top.layer.transform = self.top.startTransform;
         self.top.hidden = YES;
     }
     
     if (self.left) {
         CGFloat tx = 0.5 * self.content.bounds.size.width * (1.0 - self.left.contentEndScale);
         
-        self.left.startTransform = CGAffineTransformMakeTranslation(-self.left.bounds.size.width, 0.0);
-        self.left.contentEndTransform = CGAffineTransformMakeTranslation(self.left.bounds.size.width - tx, 0.0);
+        self.left.startTransform = CATransform3DMakeTranslation(-self.left.bounds.size.width, 0.0, 0.0);
+        self.left.contentEndTransform = CATransform3DMakeTranslation(self.left.bounds.size.width - tx, 0.0, 0.0);
         
         frame = self.view.bounds;
         frame.origin.x = 0.0;
@@ -228,15 +227,15 @@
         self.left.pgr.edges = UIRectEdgeLeft;
         [self.view addGestureRecognizer:self.left.pgr];
         
-        self.left.transform = self.left.startTransform;
+        self.left.layer.transform = self.left.startTransform;
         self.left.hidden = YES;
     }
     
     if (self.bottom) {
         CGFloat ty = 0.5 * self.content.bounds.size.height * (1.0 - self.left.contentEndScale);
         
-        self.bottom.startTransform = CGAffineTransformMakeTranslation(0.0, self.bottom.bounds.size.height);
-        self.bottom.contentEndTransform = CGAffineTransformMakeTranslation(0.0, -self.bottom.bounds.size.height + ty);
+        self.bottom.startTransform = CATransform3DMakeTranslation(0.0, self.bottom.bounds.size.height, 0.0);
+        self.bottom.contentEndTransform = CATransform3DMakeTranslation(0.0, -self.bottom.bounds.size.height + ty, 0.0);
         
         frame = self.view.bounds;
         frame.origin.y = (self.view.bounds.size.height - self.bottom.bounds.size.height);
@@ -249,15 +248,15 @@
         self.bottom.pgr.edges = UIRectEdgeBottom;
         [self.view addGestureRecognizer:self.bottom.pgr];
         
-        self.bottom.transform = self.bottom.startTransform;
+        self.bottom.layer.transform = self.bottom.startTransform;
         self.bottom.hidden = YES;
     }
     
     if (self.right) {
         CGFloat tx = 0.5 * self.content.bounds.size.width * (1.0 - self.left.contentEndScale);
         
-        self.right.startTransform = CGAffineTransformMakeTranslation(self.right.bounds.size.width, 0.0);
-        self.right.contentEndTransform = CGAffineTransformMakeTranslation(-self.right.bounds.size.width + tx, 0.0);
+        self.right.startTransform = CATransform3DMakeTranslation(self.right.bounds.size.width, 0.0, 0.0);
+        self.right.contentEndTransform = CATransform3DMakeTranslation(-self.right.bounds.size.width + tx, 0.0, 0.0);
         
         frame = self.view.bounds;
         frame.origin.x = self.view.bounds.size.width - self.right.bounds.size.width;
@@ -270,7 +269,7 @@
         self.right.pgr.edges = UIRectEdgeRight;
         [self.view addGestureRecognizer:self.right.pgr];
         
-        self.right.transform = self.right.startTransform;
+        self.right.layer.transform = self.right.startTransform;
         self.right.hidden = YES;
     }
     
